@@ -1,0 +1,34 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 Custom Attributes</title>
+	<style type="text/css"> body{font-size: 1.3em}</style>
+</head>
+	<body>
+		<h1>HTML5 Custom Attributes</h1>
+
+		<div id="target" pokemon = "pikachu" ng-app="myTestApp">
+			<section>Section 1
+				<article>Article 1</article>
+			</section>
+		</div>
+
+		<script type="text/javascript">
+			var elem = document.getElementById("target");
+			console.log(elem);
+			/* Gets the attribute named "pokemon" inside the div whose
+			   id is "target"*/
+			console.log(elem.getAttribute("pokemon"));
+
+			/* Gets the attribute named "ng-app" inside the div whose
+			   id is "target"*/
+			console.log(elem.getAttribute("ng-app"));
+
+			/* This works just as the elem value */	
+			var elem2 = document.querySelector("[ng-app]");
+			console.log(elem2);
+
+		</script>		
+	</body>
+</html>
