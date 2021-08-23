@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My First AngularJS App</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<style type="text/css"> body{font-size: 1.3em}</style>
+</head>
+	<body ng-app = "NameCalculator">
+		<h1>Name Calculator</h1>
+		<div ng-controller = "NameCalculatorController">
+			<div>
+				Your name:
+				<!-- ng-model gets the value from angular.module in app.js
+					 and ng-keyup triggers the function displayValue whenever any new
+					 character is typed into the input -->
+				<input type="text"
+				 ng-model="name" 
+				 ng-keyup = "displayValue();">
+			</div>
+			<div>Total numeric value of the person is: {{total_value}}</div>
+			<div>The name inside the input is {{name}}</div>
+		</div>
+	</body>
+</html>
